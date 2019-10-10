@@ -18,7 +18,7 @@ def pystrtolist(code):
         elif char == "\\":
             line_continuation = True
                 
-def py2pseudo(string:str):
+def py2pseudo(string:str, indent=4):
     fstring = string.strip()
     
 if __name__ == "__main__":
@@ -26,5 +26,8 @@ if __name__ == "__main__":
             "pseudopy"
             description="A parser/compiler of Python <==> Pseudocode for saving IG/AS/AL students (i hope)"
             )
+    parser.add_argument("-t", "--text", nargs="?")
     parser.add_argument("-i", "--indent", nargs="?", default=4, type=int)
     arguments = parser.parse_args(sys.argv[1:])
+    
+    #py2pseudo(
