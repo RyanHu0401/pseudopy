@@ -28,4 +28,3 @@ if __name__ == "__main__":
             )
     parser.add_argument("-i", "--indent", nargs="?", default=4, type=int)
     arguments = parser.parse_args(sys.argv[1:])
-    print(arguments.indent)
